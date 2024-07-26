@@ -10,46 +10,33 @@ const {
 	averageBrightness,
 } = Astro.props;
 ---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="card-portfolio.css">
+  <title>Proyecto GitHub</title>
+</head>
+<body>
+  <div class="project-card">
+    <img src="/" alt="Portafolio" class="project-image">
+    <div class="project-details">
+      <h2 class="project-title">Portafolio Estudiantil</h2>
+      <p class="project-description">Explorando mi trayectoria académica y creativa, descubre un viaje único a través de mi 
+									evolución como estudiante y creador, mediante este portafolio.</p>
+      <ul class="project-skills">
+        <li class="skill">HTML</li>
+        <li class="skill">CSS</li>
+        <!-- Agrega más habilidades según sea necesario -->
+      </ul>
+      <div class="project-links">
+        <a href="https://github.com/tu-repositorio" class="repo-link" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+        <a href="https://tu-demo.com" class="demo-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
 
-<div class="card__portfolio">
-	<img
-		src={imgSrc}
-		alt={title}
-		crossorigin="anonymous"
-		height={130}
-		width={332}
-		loading="lazy"
-		average-brightness={averageBrightness}
-	/>
-
-	<div class="descripcion__container">
-		<h2 class="card__title">{title}</h2>
-		<div class="descripcion">
-			<p>{descripcion}</p>
-
-			<div class="skills">
-				{
-					skills.map((skill) => (
-						<iconify-icon class="iconify" icon={skill} />
-					))
-				}
-			</div>
-
-			<div class="buttons">
-				<a href={repoURL}>
-					<span>
-						Github
-						{(<iconify-icon icon="quill:link-out" />)}
-					</span>
-				</a>
-
-				<a href={demoURL}>
-					<span>
-						Demo
-						{(<iconify-icon icon="quill:link-out" />)}
-					</span>
-				</a>
-			</div>
-		</div>
-	</div>
-</div>
+  
